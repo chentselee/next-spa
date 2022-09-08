@@ -1,7 +1,7 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import dynamic from "next/dynamic";
-const Home = dynamic(() => import("./Home"), { suspense: true });
-const About = dynamic(() => import("./About"), { suspense: true });
+import { lazy } from "react";
+const Home = lazy(() => import("./Home"));
+const About = lazy(() => import("./About"));
 import Layout from "./Layout";
 
 export default function App() {

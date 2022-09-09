@@ -1,4 +1,5 @@
 import { Nav } from "./Nav";
+import Head from "next/head";
 
 /** Layout for next pages */
 const Layout: React.FC<{ children?: React.ReactNode; withNav?: boolean }> = ({
@@ -6,10 +7,15 @@ const Layout: React.FC<{ children?: React.ReactNode; withNav?: boolean }> = ({
   withNav = true,
 }) => {
   return (
-    <div className="xl:mx-auto max-w-screen-xl">
-      {withNav && <Nav isFromNext />}
-      {children}
-    </div>
+    <>
+      <Head>
+        <title>Next.js SPA ♨</title>
+      </Head>
+      <div className="xl:mx-auto max-w-screen-xl">
+        {withNav && <Nav isFromNext />}
+        {children}
+      </div>
+    </>
   );
 };
 

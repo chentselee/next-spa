@@ -1,16 +1,22 @@
 import Layout from "../components/Layout";
+import { ContentLayout } from "../components/ContentLayout";
 import { NextPageWithLayout } from "./_app";
 
 const Prerender: NextPageWithLayout = () => {
   return (
-    <>
+    <div className="prose">
+      <h1>Prerender</h1>
       <p>This page is prerendered by Next.js</p>
-    </>
+    </div>
   );
 };
 
 Prerender.getLayout = (page) => {
-  return <Layout>{page}</Layout>;
+  return (
+    <Layout>
+      <ContentLayout>{page}</ContentLayout>
+    </Layout>
+  );
 };
 
 export default Prerender;

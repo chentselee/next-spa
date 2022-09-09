@@ -1,6 +1,7 @@
 import { Outlet, useSearchParams, Navigate } from "react-router-dom";
 import { Suspense } from "react";
 import { Nav } from "../components/Nav";
+import { ContentLayout } from "../components/ContentLayout";
 
 const RedirectFromNext = () => {
   const [searchParams] = useSearchParams();
@@ -14,9 +15,11 @@ const Layout = () => {
     <>
       <RedirectFromNext />
       <Nav isFromNext={false} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
+      <ContentLayout>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      </ContentLayout>
     </>
   );
 };

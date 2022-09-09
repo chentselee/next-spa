@@ -10,6 +10,10 @@ const Layout: React.FC<{ children?: React.ReactNode; withNav?: boolean }> = ({
     <>
       <Head>
         <title>Next.js SPA ♨</title>
+        <meta
+          name="description"
+          content="A static-exported Next.js app with react-router-dom"
+        />
       </Head>
       <div className="xl:mx-auto max-w-screen-xl">
         {withNav && <Nav isFromNext />}

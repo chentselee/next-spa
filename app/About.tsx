@@ -2,7 +2,11 @@ const About = () => {
   return (
     <div className="prose">
       <h1>About</h1>
-      <p>This page is client-side rendered.</p>
+      <p className="italic">This page is client-side rendered.</p>
+      <p>
+        This is an experiment for possible approaches to incrementally migrate a
+        fully client-side rendered app to Next.js.
+      </p>
     </div>
   );
 };

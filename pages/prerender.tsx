@@ -6,7 +6,7 @@ const Prerender: NextPageWithLayout = () => {
   return (
     <div className="prose">
       <h1>Prerender</h1>
-      <p>This page is prerendered by Next.js.</p>
+      <p className="italic">This page is prerendered by Next.js.</p>
     </div>
   );
 };

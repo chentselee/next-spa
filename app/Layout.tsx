@@ -8,6 +8,7 @@ const RedirectFromNext = () => {
   return redirect ? <Navigate to={redirect} replace /> : null;
 };
 
+/** Layout for react-router-dom */
 const Layout = () => {
   return (
     <>

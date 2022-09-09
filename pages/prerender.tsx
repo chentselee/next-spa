@@ -1,12 +1,16 @@
-import { Nav } from "../components/Nav";
+import Layout from "../components/Layout";
+import { NextPageWithLayout } from "./_app";
 
-const Prerender = () => {
+const Prerender: NextPageWithLayout = () => {
   return (
     <>
-      <Nav isFromNext />
       <p>This page is prerendered by Next.js</p>
     </>
   );
+};
+
+Prerender.getLayout = (page) => {
+  return <Layout>{page}</Layout>;
 };
 
 export default Prerender;
